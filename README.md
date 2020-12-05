@@ -10,7 +10,7 @@ CCL 2020 中文隐喻识别与情感分析任务说明与数据集
 | 训练集     | 4394  |
 | 测试集  | 1100      |
 
-&emsp;&emsp;该子任务提供训练集和封闭的测试集，具体数量如上表格所示。
+&emsp;&emsp;该子任务提供训练集和测试集，具体数量如上表所示。
 该子任务是三分类任务，标签有：动词隐喻(LABLE=1)、名词隐喻(LABLE=2)和中性(LABLE=3)。该子任务采用宏平均(Macro-averaging)进行评价。宏平均首先对每一个类的预测结果计算精确率（P）、召回率（R）以及F值，然后对所有类的F值求算术平均值。具体公式如下：  
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;F_i=\frac{2*P_i*R_i}{P_i&plus;R_i}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;F_i=\frac{2*P_i*R_i}{P_i&plus;R_i}" title="F_i=\frac{2*P_i*R_i}{P_i+R_i}" /></a></p>
@@ -25,6 +25,19 @@ CCL 2020 中文隐喻识别与情感分析任务说明与数据集
 | 训练集     | 3630  |
 | 测试集  | 909      |
 
-&emsp;&emsp;该子任务提供训练集和测试集，数据具体数量如表格所示。该子任务是七分类任务，标签有：乐(label=1)、好(label=2)、怒(lable=3)、哀(lable=4)、惧(lable=5)、恶(lable=6)、惊(lable=7)。该子任务采用宏平均(Macro-averaging)进行评价,计算公式同子任务一。  
+&emsp;&emsp;该子任务提供训练集和测试集，具体数量如上表所示。该子任务是七分类任务，标签有：乐(label=1)、好(label=2)、怒(lable=3)、哀(lable=4)、惧(lable=5)、恶(lable=6)、惊(lable=7)。该子任务采用宏平均(Macro-averaging)进行评价,计算公式同子任务一。  
 &emsp;&emsp;中文隐喻的情感分类主要有7大类，21小类。大类主要有乐、好、怒、哀、惧、恶、惊，小类主要有快乐、安心、尊敬、赞扬、相信、喜爱、祝愿、愤怒、悲伤、失望、疚、思、慌、恐惧、羞、烦闷、憎恶、贬责、妒忌、怀疑和惊奇。详细信息请查看大连理工大学信息检索实验室的情感词汇本题库(http://ir.dlut.edu.cn/EmotionOntologyDownload)。  
+
+#### 数据集文件说明
+```、
+-- dataset
+    -- subtask1-metaphor-recognition # 子任务一：中文动词隐喻识别
+        -- train.xml # 训练集
+        -- test.xml # 测试集
+        -- test_with_label.csv # 带有标签的测试集
+    -- subtask2-metaphor-sentiment-analysis # 子任务二：中文隐喻情感分析
+        -- train.xml # 训练集
+        -- test.xml # 测试集
+        -- test_with_label.csv # 带有标签的测试集
+```  
 #### 声明：禁止一切使用全部或部分本评测数据进行商业活动。
